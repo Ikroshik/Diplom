@@ -1,0 +1,17 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/basic-information") Основные сведения
+    li.breadcrumb-item.active(aria-current="page")  #{title} 
+
+block name
+    h1.fw-bold.mb-4 Структура ресурсного центра Нижневартовского социально – гуманитарного колледжа
+block contentForBlock
+    ul.fs-5
+        li Заведующий ресурсным центром по инклюзивному профессиональному образованию 
+        li Методист  
+        li Сурдопереводчик  
+        li Тьютор 
+        li Ассистент 
+        li Лаборант

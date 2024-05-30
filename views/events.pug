@@ -1,0 +1,27 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+
+block contentForBlock
+    - var link = '/events'
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/professional-development`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Повышение квалификации
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/conferences-and-seminars`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Конференции, семинары        
+    section.linkToDoc.mb-4
+        a.text-black(href=`/docs/Абилимпикс2023.pptx`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-file.fa-xl.text-black
+            p.m-0.d-inline-block Абилимпикс
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/webinars`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Вебинары

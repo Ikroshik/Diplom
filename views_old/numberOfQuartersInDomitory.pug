@@ -1,0 +1,32 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/access-environment") Доступная среда
+    li.breadcrumb-item.active(aria-current="page") #{title}
+            
+block contentForBlock
+
+    -var adresses = [{adress: "Чапаева, д.7", totalNum: 63, numOfOccupied: 59, numOfFree: 4},{adress: "Северная, д.52", totalNum: 13, numOfOccupied: 13, numOfFree: 0}]
+
+
+    .row.bg-light-subtle.fw-bold
+        .col-2.border.py-2.d-flex.align-items-center.justify-content-center
+            p.m-0 Адрес общежития
+        .col-2.border.d-flex.align-items-center.justify-content-center 
+            p.m-0 Общее кол-во мест
+        .col-4.border.d-flex.align-items-center.justify-content-center  
+            p.m-0 Кол-во занятых мест в общежитии
+        .col-4.border.d-flex.align-items-center.justify-content-center  
+            p.m-0 Кол-во свободных мест в общежитии
+    each adress in adresses
+        .row
+            .col-2.border.py-2.d-flex.align-items-center.justify-content-center.fw-bold
+                p.m-0 #{adress.adress}
+            .col-2.border.d-flex.align-items-center.justify-content-center 
+                p.m-0 #{adress.totalNum}
+            .col-4.border.d-flex.align-items-center.justify-content-center  
+                p.m-0 #{adress.numOfOccupied}
+            .col-4.border.d-flex.align-items-center.justify-content-center 
+                p.m-0 #{adress.numOfFree}
+        

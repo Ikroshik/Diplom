@@ -1,0 +1,200 @@
+doctype html
+html(lang="ru")
+    head
+        block head
+            //- Google tag (gtag.js)
+            
+            title #{title}            
+            meta(charset="UTF-8")
+            meta(name="viewport" content="width=device-width, initial-scale=1")
+            link(rel="apple-touch-icon", sizes="180x180", href="/images/favicons/apple-touch-icon.png")
+            link(rel="icon", type="image/png", sizes="32x32", href="/public/images/favicons/favicon-32x32.png")
+            link(rel="icon", type="image/png", sizes="16x16", href="/public/images/favicons/favicon-16x16.png")
+            link(rel="manifest", href="/public/images/favicons/site.webmanifest")
+
+            link(rel="stylesheet", href="/public/css/base.css")
+            link(rel="stylesheet", href="/public/assets/bootstrap/css/bootstrap.min.css")           
+            link(rel="stylesheet", href="/public/assets/fontawesome/css/fontawesome.css")
+            link(rel="stylesheet", href="/public/assets/fontawesome/css/brands.css")
+            link(rel="stylesheet", href="/public/assets/fontawesome/css/solid.css")
+            
+            
+            block scriptsHead
+                script(async, src="https://www.googletagmanager.com/gtag/js?id=G-2NLNHNY0GN")
+                script(src="/public/js/google_analytics.js")
+                script(src="/public/assets/bootstrap/js/bootstrap.bundle.min.js")       
+    body
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">Action</button>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+        nav.navbar.navbar-expand-lg
+            div.container-lg
+                a.navbar-brand(href="/")
+                    img(src="/public/images/BPOOlogoLetters.svg", alt="БПОО")
+                button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBar" aria-controls="offcanvasNavBar" aria-expanded="false" aria-label="Toggle navigation")
+                    span.navbar-toggler-icon
+                        img(src="/public/images/burger.svg", alt="")
+                div.offcanvas.offcanvas-end#offcanvasNavBar(tabindex="-1" aria-labelledby="offcanvasNavBarLabel")
+                    .offcanvas-header.mt-5
+                        h4.fw-bold.offcanvas-title#offcanvasNavBarLabel Навигация
+                        button.btn-close(data-bs-dismiss="offcanvas" aria-label="Close")
+                            i.fa-solid.fa-xmark
+                    .offcanvas-body.justify-content-end
+                        ul.navbar-nav.align-items-lg-center
+                            li.nav-item.dropdown
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="#", aria-expanded="false") Основные сведения
+                                button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2( type="button" id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false")
+                                    i.fa-solid.fa-caret-down.text-center
+                                ul.dropdown-menu(aria-labelledby="dropdownMenuClickableOutside")
+                                    li.border-bottom
+                                        a.dropdown-item(href="/basic-information/direction-of-activity") Направления деятельности
+                                    li.border-bottom
+                                        a.dropdown-item(href="/basic-information/structure-of-the-center") Структура центра
+                                    li.border-bottom
+                                        a.dropdown-item(href="/basic-information/documents") Документы
+                                    li
+                                        a.dropdown-item(href="/hotline") Контакты
+                            li.nav-item.dropdown
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/education", aria-expanded="false") Образование
+                                button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                                    i.fa-solid.fa-caret-down.text-center
+                                ul.dropdown-menu
+                                    li.border-bottom
+                                        a.text-wrap.dropdown-item(href="/education/info-adapt-edu-progs") Информация о реализуемых адаптированных <br> образовательных программах
+                                    li.border-bottom
+                                        a.text-wrap.dropdown-item(href="/education/add-edu-progs") Программы дополнительного профессионального образования
+                                    li
+                                        a.dropdown-item(href="/education/methodological-recommendations") Методические рекомендации
+                            li.nav-item.dropdown
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/proforientation", aria-expanded="false") Профориентация
+                                button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                                    i.fa-solid.fa-caret-down.text-center
+                                ul.dropdown-menu
+
+                                    li.border-bottom
+                                        a.dropdown-item(href="/proforientation/card-index-popular-professions") Картотека востребованных профессий <br> с учетом регионального рынка труда
+                                    li.border-bottom
+                                        a.dropdown-item(href="/docs/AtlasInkl2022.pdf", target="_blank") Атлас инклюзивного будущего
+                                    li.border-bottom
+                                        a.dropdown-item(href="/proforientation/info-about-prof-center-and-employment") Информация по центру
+                                            br
+                                            |профориентации и трудоустройству
+                                    //- li.border-bottom
+                                    //-     a.text-wrap.dropdown-item(href="#") Центр профориентации
+                                    li
+                                        a.dropdown-item(href="/proforientation/employment") Трудоустройство
+                            li.nav-item.dropdown
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/events", aria-expanded="false") Мероприятия
+                                button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                                    i.fa-solid.fa-caret-down.text-center
+                                ul.dropdown-menu
+                                    li.border-bottom
+                                        a.dropdown-item(href="/events/professional-development") Повышение квалификации
+                                    li.border-bottom
+                                        a.text-wrap.dropdown-item(href="/events/conferences-and-seminars") Конференции, семинары
+                                    li.border-bottom
+                                        a.dropdown-item(href="/docs/Абилимпикс2023.pptx") Абилимпикс
+                                    li
+                                        a.dropdown-item(href="/events/webinars") Вебинары
+                            li.nav-item.dropdown
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-2.px-2.py-2.rounded-start(href="/partners", aria-expanded="false") Партнеры
+                                button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                                    i.fa-solid.fa-caret-down.text-center
+                                ul.dropdown-menu
+                                    li.border-bottom
+                                        a.dropdown-item(href="/docs/1. Свод соглашений с номерами и датами о сетевом 2021 таблица.docx") Образовательные организации, <br> включенные в сетевое взаимодействие
+                                    li.border-bottom
+                                        a.dropdown-item(href="/partners/PMPK") ПМПК
+                                    li.border-bottom
+                                        a.dropdown-item(href="/docs/1. Соглашение_ФМЦИО и БПОО ХМАО 2021.pdf", target="_blank") ФМЦИО
+                                    //- li.border-bottom
+                                    //-     a.dropdown-item(href="#") Производители ТСР
+                                    //- li.border-bottom
+                                    //-     a.dropdown-item(href="#") ООИ   
+                                    li
+                                        a.dropdown-item(href="/partners/ROIV") РОИВ
+                            li.nav-item.d-lg-none.d-xxl-block.d-block.mb-5.mb-lg-0
+                                a.nav-link.col-12.border.px-2.py-2.rounded(href="/hotline") Горячая линия
+                            li.nav-item.d-lg-none.d-xxl-block.d-block.mb-5.mb-lg-0
+                                a.nav-link.col-12.border.px-2.py-2.rounded(href="/access-environment") Доступная среда
+                            li.nav-item.dropdown.d-xxl-none.d-lg-block.d-none
+                                a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(aria-expanded="false") Еще
+                                ul.dropdown-menu
+                                    li.border-bottom
+                                        a.dropdown-item(href="/hotline") Горячая линия
+                                    li
+                                        a.dropdown-item(href="/access-environment") Доступная среда
+                            li.nav-item
+                                .d-flex.align-items-center.fw-bold.rounded-pill.btnForDisabled.text-white.justify-content-center.px-3.py-2.btn-sm.specialButton
+                                    i.fa-solid.fa-eye.fa-lg.me-2
+                                    .flex-column
+                                        p.m-0 Версия для
+                                            br
+                                            | слабовидящих
+                        
+        main
+            block content
+        block foot
+            footer.bg-body-secondary.pt-4
+                .container
+                    .row.lh-lg
+                        .d-flex.flex-column.col-md-3.col-sm-6.mb-3
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/basic-information") Основные сведения
+                            a.text-black(href="/basic-information/direction-of-activity") Направления деятельности
+                            a.text-black(href="/basic-information/structure-of-the-center") Структура центра
+                            a.text-black(href="/basic-information/documents") Документы
+                            a.text-black(href="/hotline") Контакты
+                        .d-flex.flex-column.col-md-3.col-sm-6.mb-3
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/education") Образование
+                            a.text-black(href="/education/info-adapt-edu-progs") Информация о реализуемых адаптированных образовательных программах
+                            a.text-black(href="/education/add-edu-progs") Программы дополнительного профессионального образования
+                            a.text-black(href="/education/methodological-recommendations") Методические рекомендации
+                        .d-flex.flex-column.col-md-3.col-sm-6.mb-3
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/proforientation") Профориентация
+                            a.text-black(href="/proforientation/card-index-popular-professions") Картотека востребованных профессий с учетом регионального рынка труда
+                            a.text-black(href="/docs/AtlasInkl2022.pdf") Атлас инклюзивного будущего
+                            a.text-black(href="/proforientation/info-about-prof-center-and-employment") Информация по центру профориентации и трудоустройству
+                            //- a.text-black(href="#") Центр профориентации
+                            a.text-black(href="/proforientation/employment") Трудоустройство
+                        .d-flex.flex-column.col-md-3.col-sm-6.mb-3
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/events") Мероприятия
+                            a.text-black(href="/events/professional-development") Повышение квалификации
+                            a.text-black(href="/events/conferences-and-seminars") Конференции, семинары
+                            a.text-black(href="/docs/Абилимпикс2023.pptx") Абилимпикс
+                            a.text-black(href="/events/webinars") Вебинары
+                        .d-flex.flex-column.col-md-3.col-sm-6.mb-3
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/partners") Партнеры
+                            a.text-black(href="/docs/1. Свод соглашений с номерами и датами о сетевом 2021 таблица.docx", target="_blank") Образовательные организации, включенные в сетевое взаимодействие
+                            a.text-black(href="/partners/PMPK") ПМПК
+                            a.text-black(href="/docs/1. Соглашение_ФМЦИО и БПОО ХМАО 2021.pdf", target="_blank") ФМЦИО
+                            //- a.text-black(href="#") Производители ТСР
+                            //- a.text-black(href="#") ООИ
+                            a.text-black(href="/partners/ROIV") РОИВ
+                        .d-flex.flex-column.col-md-3.col-6
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/hotline") Горячая линия                       
+                        .d-flex.flex-column.col-md-3.col-6
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="/access-environment") Доступная среда
+                        .d-flex.col-md-3.col-sm-6.col-12.justify-content-end.socials
+                            a.text-black.fw-bold.text-nowrap.mb-2(href="//vk.com/public217488903")
+                                i.fa-brands.fa-vk(style="color: #2f186c; font-size: 2.5rem")
+                            a.text-black.fw-bold.text-nowrap.mb-2.mx-sm-auto.ms-5(href="//web-telegram.ru/#@bpoo_hmao_ugra")
+                                i.fa-brands.fa-telegram(style="color: #2f186c; font-size: 2.5rem")  
+                                       
+        block scriptsBody
+            script(src="/public/js/yandex_metrika.js")
+            noscript
+                div
+                    img(src="https://mc.yandex.ru/watch/95692490" style="position:absolute; left:-9999px;" alt="")
+            script(src="https://lidrekon.ru/slep/js/jquery.js") 
+            script(src="/public/js/uhpv-full.min.js")

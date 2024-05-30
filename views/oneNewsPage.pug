@@ -1,0 +1,37 @@
+//- extends base
+
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/news") Новости
+    li.breadcrumb-item.active(aria-current="page") #{news.title}
+    
+block name
+    
+            
+append head
+    link(rel="stylesheet", href="/css/stylesForOtherPages.css")
+
+block contentForBlock
+    .container.d-flex.flex-column
+        h1.fw-bold.mb-4 #{news.title}
+        //- img.mb-4.w-50.rounded.mx-auto(src=`/images/Camp/${news.image}`, alt="")
+        .text 
+            |!{news.full_text}
+//- block content
+//-     .bg-body-tertiary
+//-         .container.pt-5
+//-             nav(aria-label="breadcrumb")
+//-                 ol.breadcrumb
+//-                     li.breadcrumb-item
+//-                         a.text-black.fw-bold(href="/") БПОО
+//-                     li.breadcrumb-item
+//-                         a.text-black.fw-bold(href="/news") Новости
+//-                     li.breadcrumb-item.active(aria-current="page") #{news.title}
+    
+//-         .container.d-flex.flex-column
+//-             h1.fw-bold #{news.title}
+//-             img.mt-4.w-50.rounded.mx-auto(src=`/images/Camp/${news.image}`, alt="")
+            
+//-             #{news.full_text}

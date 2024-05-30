@@ -1,0 +1,49 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/events") Мероприятия
+    li.breadcrumb-item.active(aria-current="page")  #{title} 
+
+block contentForBlock
+    - var courses = [{courseName: "Инклюзивное образование детей с ОВЗ в условиях реализации ФГОС", hours: 72, price: 3000}, {courseName: "Подготовка региональных экспертов конкурсов профессионального мастерства 'Абилимпикс'", hours: 72, price: 3000}, {courseName: "Ассистивные технологии в инклюзивном образовании", hours: 72, price: 4000}]
+    h2.fw-bold.mb-5 Программы повышения квалификации по вопросам инклюзивного образования инвалидов и лиц с ограниченными возможностями здоровья:
+    .row.fw-bold.text-center
+        .col-1.border.d-flex.align-items-center.justify-content-center
+            p.m-0 № 
+                br
+                |п/п
+        .col-7.border.py-3
+            p.m-0 Наименование услуги
+            p.m-0 (реализуемой дополнительной профессиональной программы)
+        .col-2.border.d-flex.align-items-center.justify-content-center 
+            p.m-0 Количество часов
+        .col-2.border.d-flex.align-items-center.justify-content-center 
+            p.m-0 Стоимость
+    .row.fw-bold.text-center.border
+        .col.py-4
+            p.m-0 Реализация дополнительных профессиональных программ (повышение квалификации)
+    each course, index in courses
+        .row
+            .col-1.text-center.border.d-flex.align-items-center.justify-content-center
+                p.m-0 #{index+1}
+            .col-7.py-3.border
+                p.m-0 #{course.courseName}
+            .col-2.text-center.border.d-flex.align-items-center.justify-content-center 
+                p.m-0 #{course.hours}
+            .col-2.text-center.border.d-flex.align-items-center.justify-content-center 
+                p.m-0 #{course.price}
+    p.mt-4.fs-4 Отделение дополнительного профессионального образования БУ "Нижневартовский социально-гуманитарный колледж"
+        br 
+        |628602, город Нижневартовск,
+        br
+        |улица Дружбы народов, дом 13-а, кабинет 311
+        br
+        |#[a.fw-bold(href="tel:+73466434092") +7 (3466) 43-40-92]
+        br
+        |#[a.fw-bold(href="mailto:nsgk-dop@nv-study.ru") nsgk-dop@nv-study.ru]
+    p Причины, по которым нужно выбирать дополнительное профессиональное обучение в нашем колледже:
+    ul 
+        li занятия ведут специалисты, зарекомендовавшие себя в своем направлении деятельности как высококлассные профессионалы своего дела;
+        li создана материально-техническая база, позволяющая реализовывать дополнительное профессиональное образование на высоком уровне;
+        li при реализации дополнительных профессиональных программ дистанционно используем одну из лучших систем видеосвязи в России – TrueConf.

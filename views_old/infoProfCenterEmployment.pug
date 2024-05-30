@@ -1,0 +1,10 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/proforientation") Профориентация
+    li.breadcrumb-item.active(aria-current="page") #{title} 
+
+block contentForBlock
+    img.w-100.border.border-3.p-2.mb-5(src="/images/Информация по центру профориентации и трудоустройству1.jpg", alt="")
+    img.w-100.border.border-3.p-2(src="/images/Информация по центру профориентации и трудоустройству2.jpg", alt="")

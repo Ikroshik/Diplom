@@ -1,0 +1,322 @@
+.bgBanner {
+    /* background-image: linear-gradient(348deg, rgba(240, 191, 66, 0.9), #eaa93d 37%, #f4c456); */
+    /* background-image: linear-gradient(348deg, #67A6F4, #5698e9 37%, #67A6F4); */
+    background-image: linear-gradient(348deg, #F8EBA0, #5896F3 50%, #F3DB59); 
+    /* background-image: linear-gradient(360deg, white , rgb(248,249,250)); */
+    
+    margin-top: -4.2rem !important;
+    padding-top: 6rem;
+}
+
+.hotLine {
+    max-width: 52%;
+    font-size: .8rem;  
+}
+
+.logoPio {
+    max-width: 90% !important;
+}
+
+.bgForAtlases {
+    background-color: #2f186c; 
+    width: fit-content;
+}
+
+.bgForNews {
+    background-color: #2f186c; 
+    width: fit-content;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.atlasBanner .atlas {
+    background-position: center -20px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    height: 50rem !important;
+    filter: blur(2px);
+    transition: .2s;
+}
+
+.atlasFMCIO {
+    background-image: url("/images/atlasFMCIO.jpg");
+}
+
+.atlasHMAO {
+    background-image: url("/images/AtlasInkl2022_removed_page-0001.jpg");
+}
+
+.atlasBanner .position-relative:hover .mx-auto {
+    background-size: 100%;
+    filter: blur(0px);
+    transition: .2s;
+}
+
+.atlasBanner .position-relative h1 {
+    transition: .2s;
+}
+
+.atlasBanner .position-relative:hover h1 {
+    font-size: 2.7rem;
+    transition: .2s;
+}
+
+.atlasBanner h1 {
+    width: 200%;
+    background-color: #ecd86f;
+}
+
+.atlasBanner .border {
+    width: 201%;
+    height: 100.5%;
+}
+
+.atlasBanner .bg-light-subtle {
+    width: 200%;
+}
+
+.blocksWithNews a {
+    text-decoration: none !important;
+}
+
+.linksForPage a:hover {
+    text-decoration: none !important;
+}
+
+@media (max-width: 991.9px) {
+    .hotLine {
+        max-width: 80% !important;
+    }
+    .blockForHotLine {
+        padding-left: calc(var(--bs-gutter-x) * .5) !important;
+    }
+    .bpooNameText {
+        text-align: center;
+    }
+    #aboutBPOO img {
+        width: 80% !important;
+    }
+    #aboutBPOO h2 {
+        text-align: center !important;
+    }
+
+    .blockWithNews .bg-white {
+        height: 400.98px;
+    }
+    .blockWithNews p {
+        -webkit-line-clamp: 3 !important;
+    }
+    .lines {
+        top: 780px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hotLine {
+        max-width: 100% !important;
+    }
+    .bpooNameText h1 {
+        font-size: 1.5rem  !important;
+    }
+    .bpooLogoImg {
+        width: 100% !important;
+    }
+    .bigBlockWithNews #imgForNews {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .bigblockWithNews .bg-white {
+        height: 555.47px !important;
+    } 
+    .nameCollegeWrap {
+        white-space:normal !important;
+    }
+}
+
+.nameCollegeWrap {
+    white-space: nowrap;
+}
+
+@media (max-width: 575px){ 
+    #VOG {
+        max-width: 25% !important;
+    }
+}
+
+.bpooLogoImg {
+    width: 90%;
+}
+
+/* Анимация при наводе на кнопки */
+.linksForPage a {
+    transition: .4s;
+}
+
+.linksForPage a:hover {
+    transform: scale(1.25);
+    transition: .4s;
+}
+
+.bpooNameText {
+    max-width: 65%;
+}
+
+@media (max-width: 1600px) {
+    .bpooNameText {
+        max-width: 85%;
+    }
+}
+
+@media (min-width: 991.9px) and (max-width: 1600px) {
+    .lines {
+        top: 550px !important;
+    }
+}
+
+@media (min-width: 767.98px) and (max-width: 1200px) {
+    .bpooNameText {
+        max-width: 100%;
+        margin-left: 10%;
+        margin-top: 0 !important;
+    }
+    .bpooNameText h1 {
+        font-size: 2rem;
+    }
+    .blockWithNews .bg-white, .bigblockWithNews .bg-white {
+        height: 399.47px !important;
+    }
+    .blockWithNews p {
+        -webkit-line-clamp: 3 !important;
+    }
+}
+
+
+.blockWithNews .bg-white, .bigblockWithNews .bg-white {
+    height: 470.98px;
+}
+
+.bgBanner > div > div {
+    z-index: 1;
+}
+
+.lines {
+    position: absolute;
+    background-image: url('/images/lines.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 207px;
+    top: 600px;
+    z-index: 0;
+    overflow: hidden !important;
+    pointer-events: none;
+}
+
+.linksForPage {
+    margin-top: 90px !important;
+    z-index: 2;
+    position: relative;
+}
+
+
+.linksForPage div {
+    cursor: pointer;
+}
+
+.nav-link{
+    color: black !important;
+}
+
+#navAfterScroll {
+    background-color: #ecd86f;
+    display: none;
+}
+
+#navAfterScroll a {
+    color: black !important;
+}
+
+.newsH6 {
+    color: #b17e27;
+}
+
+.blockWithNews .bg-white, .bigBlockWithNews .bg-white {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.blockWithNews .bg-white:hover, .bigBlockWithNews .bg-white:hover, .blockWithNews:focus-within, .bigBlockWithNews:focus-within  {
+    transform: scale(1.02);
+    transition: .2s;
+}
+
+.blockWithNews p, .bigblockWithNews p {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    hyphens: auto;
+}
+
+.bigblockWithNews p {
+    -webkit-line-clamp: 10;
+}
+
+.bigBlockWithNews img {
+    margin-left: -25px;
+}
+
+.bgForLinksBlock {
+    background-color: #1a1a1b;
+}
+
+.bgForLinksBlock a {
+    text-decoration: none !important;
+}
+
+#aboutBPOO, #news, #links {
+    padding-top: 4.15rem !important;
+}
+
+#links {
+    padding-bottom: 4rem !important;
+}
+
+.bgForLinks {
+    width: fit-content;
+    color: #1a1a1b;
+}
+
+
+.newsBtn {
+    background-color: #2f186c !important;
+    transition: .4s;
+}
+
+.newsBtn:hover, .newsBtn:focus-visible {
+    background-color: rgb(57, 31, 127) !important;
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+.newsBtn:focus-visible {
+    outline: black solid !important;
+}
+
+#links img {
+    max-width: 50%;
+}
+
+.border-5 {
+    border-width: 8px !important;
+}
+
+
+.bgForLinksBlock .container div div {
+    transition: .2s;
+}
+
+.bgForLinksBlock .container div div div:hover {
+    transform: scale(1.02);
+    transition: .2s;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/proforientation") Профориентация
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+            
+block contentForBlock
+    - var images = [{img: "codingInWeb.jpg",imgName: "Программирование в компьютерных системах",code: "09.02.03"},{img: "sysAdmin.jpg",imgName: "Сетевое и системное администрирование",code: "09.02.06"},{img: "infoSys.jpg",imgName: "Информационные системы и программирование",code: "09.02.07"},{img: "vospit.jpg",imgName: "Дошкольное образование",code: "44.02.01"},{img: "nachalk.jpg",imgName: "Преподавание в начальных классах",code: "44.02.02"},{img: "specVospit.jpg",imgName: "Специальное дошкольное образование",code: "44.02.04"},{img: "corecPedagogikaNachalk.jpg",imgName: "Коррекционная педагогика в начальном образовании",code: "44.02.05"},{img: "sestrDelo.jpg",imgName: "Сестринское дело",code: "34.02.01"},{img: "lechedDelo.jpg",imgName: "Лечебное дело",code: "31.02.01"},{img: "akusherDelo.jpg",imgName: "Акушерское дело",code: "31.02.02"}]
+    .row.mb-1.cartotekaRow
+        .col-9.col-xl-10.border.d-flex.align-items-center
+            p.m-0 Наименование специальности, профессии по перечням профессий и специальностей  
+        .col-3.col-xl-2.border
+            p.m-0.hyphensSpec Код специаль&shy;ности, профессии
+    each image in images  
+        .row.mb-4.cartoteka.border-lg
+            .col-xl-3.col-lg-3.col-12.p-0
+                img.w-100.rounded.shadow(src=`/images/${image.img}`, alt="")
+            .col-xl-7.col-lg-6.col-9.my-2.align-items-center.d-flex.shadow
+                h3.fw-bold.m-0.py-2 #{image.imgName}
+            .col-xl-2.col-lg-3.col-3.my-2.rounded-end.align-items-center.d-flex.justify-content-center.flex-grow-1
+                h2.fw-bold.m-0 #{image.code}

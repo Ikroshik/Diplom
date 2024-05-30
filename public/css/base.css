@@ -1,0 +1,150 @@
+/* Подключение шрифтов */
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/public/fonts/gothampro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/public/fonts/gothampro_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/public/fonts/gothampro_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('/public/fonts/gothampro_bolditalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Gotham Pro' !important;
+}
+
+/* Подчеркивание у ссылок */
+a {
+    text-decoration: none !important;
+}
+a:hover {
+    text-decoration: underline !important;
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+/* Настройка шрифта в навигации */
+nav a {
+    font-size: .9rem !important;
+    letter-spacing: 0.1px;
+    font-weight: bold !important;
+}
+
+/* Выпадающее меню в навигационном поле  */
+@media (max-width: 991.9px) {
+    .nav-link {
+        display: inline-block !important;
+    }
+    .dropdown-toggle::after  {
+        display: none !important;
+    }
+    .btn.dropdown-toggle > * {
+        font-size: 1.35rem !important;
+    } 
+    .dropdown button i {
+        transition: .4s;
+    }
+    .dropdown:hover button i, .dropdown:focus button i {
+        transform: rotate(180deg);
+    }
+    .dropdown {
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (min-width: 992px) { 
+    .dropdown-toggle, .nav-link.col-12 {
+        border: none !important;
+    }   
+}
+
+
+/* .dropdown .dropdown-menu {
+    display: block;
+    /*visibility: hidden;*/
+    opacity: 0;  
+    transform-origin: top;
+    transform: scaleY(0);
+    max-height: 0vh;
+    transition: .3s;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; 
+    /*visibility: visible;*/
+    opacity: 1;
+    transform: scaleY(1);
+    max-height: 100vh;
+}
+
+.dropdown .dropdown-toggle::after {
+    transition: .4s;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: rotate(180deg);
+} */
+
+.dropdown-toggle::after  {
+    vertical-align: middle !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bs-gray-200) !important;
+}
+
+.dropdown:nth-child(5) .dropdown-menu {
+    left: -75 !important;
+} 
+
+
+/* Подвал */
+footer {
+    font-size: 14px;
+}
+
+/* Кнопка "для слабовидящих" */
+.btnForDisabled {
+    background-color: #2f186c;
+    cursor: pointer;
+    line-height: 1.1rem;
+    font-size: 14px;
+    transition: .4s;
+}
+
+.btnForDisabled:hover {
+    transform: scale(1.05);
+    background-color: rgb(62, 37, 130);
+}
+
+.socials a {
+    height: fit-content;
+    transition: .4s;
+}
+
+.socials a:hover {
+    transform: scale(1.25);
+}
+
+@media (max-width: 1200px) {
+    .btnForDisabled {
+        font-size: small;
+    }
+}

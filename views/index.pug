@@ -1,0 +1,202 @@
+//- extends base
+
+//- append head 
+//-   link(rel="stylesheet", href="/css/mainPage.css")
+
+//- block content
+//-   article.bgBanner
+//-     article.container-fluid.px-0.mx-0.d-flex.justify-content-around.row.pb-5
+//-       div.container.ps-5.mb-5
+//-         section.bg-white.rounded-4.d-flex.py-2.px-4.hotLine
+//-           img(src="/images/phone.svg", width="25% ", alt="")
+//-           section.ms-4
+//-             h3.fw-bold Горячая линия
+//-             p Текст текст текст Текст текст текст Текст текст текст Текст текст текст Текст текст текст Текст текст текст Текст текст текст Текст текст текст
+
+//-       section.col-6.d-flex.mt-3
+//-         section.text-white.NAME.mt-4.ms-auto
+//-           h5 Бюджетное учреждение профессионального образования Ханты-Мансийского автономного округа – Югры
+//-           h1.fw-bold «Нижневартовский социально-гуманитарный колледж»
+//-       section.col-6.justify-content-end.d-flex.px-0.mx-0
+//-         section
+//-           img.shadow-lg.rounded-start-4(src="/images/logoBPOOBig.png", width="100%",alt="")
+
+//-     .lines
+
+//-     article.container.linksForPage
+//-       article.d-flex.justify-content-around
+//-         a(href="#aboutBPOO")
+//-           section.d-flex.flex-column
+//-             img.mx-auto(src="/images/logoBPOOSquare.png", width="50px", alt="")
+//-             span.text-white О БПОО
+//-         a(href="#news")
+//-           section.d-flex.flex-column
+//-             img.mx-auto(src="/images/newsButton.png", width="50px", alt="")          
+//-             span.text-white Новости
+//-         a(href="#links")
+//-           section.d-flex.flex-column
+//-             img.mx-auto(src="/images/browser.png", width="50px", alt="")
+//-             span.text-white Полезные ссылки
+//-     nav.navbar.fixed-top.navbar-expand-lg#navAfterScroll
+//-         div.container                       
+//-             a.navbar-brand(href="#")
+//-                 img(src="/images/logoBPOOLetters.png", width="80px" alt="БПОО")
+//-             button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+//-                 span.navbar-toggler-icon
+//-             div.collapse.navbar-collapse.justify-content-end#navbarNavDropdown
+//-                 ul.navbar-nav
+//-                     li.nav-item.dropdown
+//-                         a.nav-link.dropdown-toggle.text-nowrap(href="/basic-information", aria-expanded="false") Основные сведения
+//-                         ul.dropdown-menu
+//-                             li
+//-                                 a.dropdown-item(href="#") Направления деятельности
+//-                             li
+//-                                 a.dropdown-item(href="#") Структура центра
+//-                             li
+//-                                 a.dropdown-item(href="#") Документы
+//-                             li
+//-                                 a.dropdown-item(href="#") Контакты
+//-                     li.nav-item.dropdown
+//-                         a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Образование
+//-                         ul.dropdown-menu
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Информация о реализуемых адаптированных образовательных программах
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Программы дополнительного профессионального образования
+//-                             li
+//-                                 a.dropdown-item(href="#") Методические рекомендации
+//-                     li.nav-item.dropdown
+//-                         a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Профориентация
+//-                         ul.dropdown-menu
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Картотека востребованных профессий с учетом регионального рынка труда
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Центр профориентации
+//-                             li
+//-                                 a.dropdown-item(href="#") Трудоустройство
+//-                     li.nav-item.dropdown
+//-                         a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Мероприятия
+//-                         ul.dropdown-menu
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Повышение квалификации
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Конференции, семинары
+//-                             li
+//-                                 a.dropdown-item(href="#") Абилимпикс
+//-                             li
+//-                                 a.dropdown-item(href="#") Вебинары
+//-                     li.nav-item.dropdown
+//-                         a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Партнеры
+//-                         ul.dropdown-menu
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Образовательные организации, включенные в сетевое взаимодействие
+//-                             li
+//-                                 a.text-wrap.dropdown-item(href="#") Производители ТСР
+//-                             li
+//-                                 a.dropdown-item(href="#") ПМПК
+//-                             li
+//-                                 a.dropdown-item(href="#") ООИ
+//-                             li
+//-                                 a.dropdown-item(href="#") РОИВ
+//-                     li.nav-item
+//-                         a.nav-link.text-nowrap(href="#") Горячая линия
+//-                     li.nav-item
+//-                         a.nav-link.text-nowrap(href="#") Доступная среда
+//-     article.container.py-5#aboutBPOO
+//-       article.row.justify-content-center.align-items-center
+//-         section.col-4
+//-           img.shadow-lg.rounded-5.w-100(src="/images/example.png", alt="")
+//-         section.col-6.text-white
+//-           h2.fw-bold БАЗОВАЯ ПРОФЕССИОНАЛЬНАЯ ОБРАЗОВАТЕЛЬНАЯ ОРГАНИЗАЦИЯ ПО ИНКЛЮЗИВНОМУ ОБРАЗОВАНИЮ
+//-           p Базовая профессиональная образовательная организация – профессиональная образовательная организация, обеспечивающая поддержку функционирования региональной системы инклюзивного среднего профессионального образования инвалидов и лиц с ограниченными возможностями здоровья.
+//-         section.col-6.text-white
+//-           h2.fw-bold ЦЕЛЬ БПОО
+//-           p 1.	Разработка и реализация комплекса мер по профессиональной ориентации инвалидов и лиц с ОВЗ в целях выбора ими профессии/специальности с учетом их способностей и склонностей.<br>2.	Содействие в создании условий доступности в ПОО Ханты-Мансийского автономного округа-Югры, в том числе через организацию сетевого взаимодействия.<br>3.	Реализация мероприятий по сопровождению инвалидов и лиц с ОВЗ при освоении образовательных программ СПО и ПО, содействие в их последующем трудоустройстве.
+//-         section.col-4
+//-           img.shadow-lg.rounded-5.w-100(src="/images/example.png", alt="")
+//-         section.col-4
+//-           img.shadow-lg.rounded-5.w-100(src="/images/example.png", alt="")
+//-         section.col-6.text-white
+//-           h2.fw-bold ЗАДАЧИ БПОО
+//-           p Координация развития инклюзивного  СПО и ПО в Ханты-Мансийском автономном округе-Югре, разработка и внедрение региональной модели сетевого взаимодействия с ПОО Ханты-Мансийского автономного округа-Югры для обеспечения условий доступности получения СПО и ПО для инвалидов и лиц с ОВЗ.
+          
+  
+//-   article.bg-body-tertiary#news
+//-     article.container
+//-       h6.text-center.newsH6 НОВОСТИ
+//-       h1.text-center.fw-bold Последние новости
+//-       article.blocksWithNews.row.g-4.mt-3
+//-         section.bigBlockWithNews.col-8
+//-           section.bg-white.d-flex.rounded-3.shadow.py-5
+//-             img.me-4.shadow-sm.rounded-5#imgForNews(src="/images/example.png", alt="")
+//-             section
+//-               span#dateNews 01.01.2023
+//-               h4.fw-bold#titleNews Выбор профессии - выбор будущего!
+//-               p#newsText Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст
+//-         section.blockWithNews.col-4
+//-           section.bg-white.d-flex.rounded-3.shadow.flex-column.h-100
+//-             span.ps-4.pt-3#dateNews 01.01.2023        
+//-             img.mx-auto#imgForNews(src="/images/example.png", width="70%", alt="")
+//-             section.px-4
+//-               h4.fw-bold#titleNews Выбор профессии - выбор будущего!
+//-               p#newsText Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст
+//-         section.blockWithNews.col-4
+//-           section.bg-white.d-flex.rounded-3.shadow.flex-column
+//-             span.ps-4.pt-3#dateNews 01.01.2023          
+//-             img.mx-auto#imgForNews(src="/images/example.png", width="70%", alt="")
+//-             section.px-4
+//-               h4.fw-bold#titleNews Выбор профессии - выбор будущего!
+//-               p#newsText Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст
+//-         section.blockWithNews.col-4
+//-           section.bg-white.d-flex.rounded-3.shadow.flex-column
+//-             span.ps-4.pt-3#dateNews 01.01.2023          
+//-             img.mx-auto#imgForNews(src="/images/example.png", width="70%", alt="")
+//-             section.px-4
+//-               h4.fw-bold#titleNews Выбор профессии - выбор будущего!
+//-               p#newsText Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст
+//-         section.blockWithNews.col-4
+//-           section.bg-white.d-flex.rounded-3.shadow.flex-column
+//-             span.ps-4.pt-3#dateNews 01.01.2023          
+//-             img.mx-auto#imgForNews(src="/images/example.png", width="70%", alt="")
+//-             section.px-4  
+//-               h4.fw-bold#titleNews Выбор профессии - выбор будущего!
+//-               p#newsText Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст Текст текст текст текст
+//-       section.text-center.py-5
+//-         button.btn.btn-lg.rounded-pill.text-white.newsBtn.px-5.py-3 Все новости
+
+//-   article.bgForLinksBlock#links
+//-     article.container
+//-       h6.text-center.newsH6 ПОЛЕЗНЫЕ ССЫЛКИ
+//-       h1.text-center.fw-bold.text-white Важные ресурсы
+//-       article.row.g-4.text-center.py-5
+//-         section.col-4
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-4
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-4
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-3
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-3
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-3
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+//-         section.col-3
+//-           section.bg-white.rounded-3.flex-column.d-flex
+//-             img.mx-auto(src="/images/example.png", alt="")
+//-             span Текст текст текст текст текст
+
+  
+//-   script(src="/js/script.js") 

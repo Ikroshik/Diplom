@@ -1,0 +1,20 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/events") Мероприятия
+    li.breadcrumb-item
+        if url == "/events/webinars/webinar_:id"
+            a.text-black.fw-bold(href="/events/webinars") Вебинары
+        else 
+            a.text-black.fw-bold(href="/events/conferences-and-seminars") Конференции, семинары
+    li.breadcrumb-item.active(aria-current="page") #{web.title}
+
+block name
+    h1.fw-bold.mb-4 #{web.title}
+
+block contentForBlock
+    .text
+        |!{web.full_text}
+    p.m-0.text-end #{web.date}
+    

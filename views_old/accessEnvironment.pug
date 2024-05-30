@@ -1,0 +1,90 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page") Доступная среда
+            
+block contentForBlock
+    - var link = "/access-environment"
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-means-of-edu`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О специально оборудованных учебных кабинетах
+
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-facilities-for-practical-lesson-persons-with-health-limitations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span Об объектах для проведения практических занятий для лиц с ОВЗ
+
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-library-for-persons-with-health-limitations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О библиотеке, приспособленной для лиц с ОВЗ
+    
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-facilities-of-sport-for-persons-with-health-limitations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span Об объектах спорта, приспособленных для лиц с ОВЗ
+
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-edu-means-for-persons-with-health-limitations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О средствах обучения и воспитания, приспособленных для лиц с ОВЗ
+
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-ensuring-access-to-building`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span Об обеспечении беспрепятственного доступа в здание колледжа
+
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/about-special-conditionals-of-meal`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О специальных условиях питания
+
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/about-special-conditionals-of-health`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О специальных условиях охраны здоровья
+    
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/about-accesss-to-info-sys-and-IT`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О доступе к информационным системам и информационно-телекоммуникационным сетям
+
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/about-electronic-edu-resources-for-persons-with-health-limitations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span Об электронных образовательных ресурсах, к которым обеспечивается доступ инвалидов и лиц с ОВЗ
+
+    section.linkToDoc.mb-4   
+        a.text-black(href=`/docs/О наличии специальных технических средств.pdf`, target="_blank") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-file.fa-lg.text-black
+            span О наличии специальных технических средств обучения коллективного и индивидуального пользования
+
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/about-conditionals-for-access-to-dormitory`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О наличии условий для беспрепятственного доступа в общежитие
+
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/about-number-of-quarters-in-dormitory`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span О количестве жилых помещений в общежитии
+    
+    section.linkToDoc.mb-4   
+        a.text-black(href=`${link}/availability-passport`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            span Паспорт доступности

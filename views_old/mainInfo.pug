@@ -1,0 +1,29 @@
+extends baseForChoosing
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page") Основные сведения
+            
+block contentForBlock
+    - var link = '/basic-information'
+    //- .fa-file
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/direction-of-activity`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Направления деятельности
+    section.linkToDoc.mb-4
+        a.text-black(href=`/basic-information/structure-of-the-center`)
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Структура центра
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/documents`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Документы
+    section.linkToDoc.mb-4
+        a.text-black(href=`/hotline`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Контакты
+    

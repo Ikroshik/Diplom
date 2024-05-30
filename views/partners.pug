@@ -1,0 +1,44 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+            
+block contentForBlock
+    .linkToDoc.mb-4
+        a.text-black(href="/docs/1. Свод соглашений с номерами и датами о сетевом 2021 таблица.docx") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-file.fa-xl.text-black
+            p.m-0.d-inline-block Образовательные организации, включенные в сетевое взаимодействие
+    .linkToDoc.mb-4
+        a.text-black(href="/partners/PMPK") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block ПМПК
+    .linkToDoc.mb-4
+        a.text-black(href="/docs/1. Соглашение_ФМЦИО и БПОО ХМАО 2021.pdf", target="_blank") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-file.fa-xl.text-black
+            p.m-0.d-inline-block ФМЦИО
+    .linkToDoc.mb-4
+        a.text-black(href="/partners/ROIV") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block РОИВ   
+    .linkToDoc.mb-4
+        a.text-black(href="//rumc72.ru", target="_blank") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-globe.text-black
+            p.m-0.d-inline-block РУМЦ | БПОО Тюменской области
+    
+    .linkToDoc.mb-4
+        a.text-black(href="//fmc-spo.ru", target="_blank") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-globe.text-black
+            p.m-0.d-inline-block ФМЦИО
+    
+    
+    .linkToDoc.mb-4
+    a.text-black(href="//iro86.ru/index.php/component/k2/item/3407-o-tspmpk", target="_blank") 
+        span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+            i.fa-solid.fa-globe.text-black
+        p.m-0.d-inline-block Центральная психолого-медико-педагогическая комиссия Ханты-Мансийского автономного округа - Югры

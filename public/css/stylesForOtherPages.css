@@ -1,0 +1,114 @@
+.navbar {
+    background-color: #ecd86f;
+}
+
+.navbar a {
+    color: black;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body, html, .bg-body-tertiary {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+.linkToDoc a:hover .iconArrow, .iconList  {
+    background-color: #ecd86f !important;
+    transition: .4s;
+}
+
+.linkToDoc .iconArrow {
+    transition: .4s;
+} 
+
+.cartoteka .rounded-end {
+    position: relative;
+}
+
+.cartoteka .rounded-end::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 50%;
+    border: 1px solid #6a6a6a;
+}
+
+/* .cartoteka .rounded-end::after {
+    position: absolute;
+    right: 0;
+    content: "";
+    height: 100%;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+} */
+
+.cartoteka:nth-child(2n) .rounded-end::after {  
+    border: 10px solid #ecd86f;
+}
+
+.cartoteka .my-2 {
+    background-color: rgb(233,236,239);
+}
+
+main a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.infoAboutAdEduRow {
+    min-width: 1200px !important;
+}
+
+.hyphensSpec {
+    hyphens: auto;
+}
+
+.minw-1026 {
+    min-width: 1026ox;
+}
+
+.minw-840 {
+    min-width: 840px;
+}
+
+.imgPreviewNews {
+    height: fit-content;
+    align-self: center;
+}
+
+.active>.page-link, .page-link.active {
+    background-color: #ecd86f!important;
+    border-color: #ecd86f!important;
+    color: black!important;
+}
+
+.page-link {
+    color: black !important;
+}
+
+@media (max-width: 767.98px) {
+    .cartoteka h2 {
+        font-size: 1rem !important;
+    }
+
+    .cartoteka h3 {
+        font-size: 1rem !important;
+    }
+
+    .cartoteka, .cartotekaRow {
+        min-width: 420px !important
+    }
+}
+

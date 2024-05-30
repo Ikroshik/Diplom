@@ -1,0 +1,62 @@
+extends base
+
+append head
+    link(rel="stylesheet", href="/css/stylesForOtherPages.css")
+
+block content
+    .bg-body-tertiary.pt-5
+        each _, index in news
+            .container.d-flex.mb-5
+                a.shadow(href=`/news/news_id_${news[index].id}`)   
+                    .d-flex.bg-body-secondary.rounded.p-4
+                        img.col-4.rounded.me-4(src=`/images/Camp/${news[index].image}`, alt="")
+                        .flex-column.justify-content-center.d-flex
+                            small #{news[index].createdAt.toLocaleDateString("ru-RU")}
+                            h2.fw-bold #{news[index].title}
+                            p #{news[index].mini_text}
+            
+              
+          
+        nav.mb-5(aria-label="Pagination news")
+            ul.pagination.justify-content-center
+                if page == 1
+                    li.page-item.disabled
+                        a.page-link(href=`/news/page_1`, aria-label="First") 
+                            span(aria-hidden="true") &laquo;
+                            span.sr-only Первый
+                else
+                    li.page-item
+                        a.page-link(href=`/news/page_1`, aria-label="First") 
+                            span(aria-hidden="true") &laquo;
+                            span.sr-only Первый
+                - var i = 0
+                - var pages = [-2, -1, 0, +1, +2]
+                while i < 5  
+                    if count < parseInt(page)+pages[i]
+                                            
+                    else if page > 2 
+                        if page == parseInt(page)+pages[i]
+                            li.page-item.active
+                                a.page-link.bg-black(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}    
+                        else   
+                            li.page-item
+                                a.page-link(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}           
+                    else
+                        if page == i+1
+                            li.page-item.active
+                                a.page-link.bg-black(href=`/news/page_${i+1}`) #{i+1}
+                        else 
+                            li.page-item
+                                a.page-link(href=`/news/page_${i+1}`) #{i+1}
+
+                    - i++
+                if page == Math.round(count/20)
+                    li.page-item.disabled
+                        a.page-link(href=`/news/page_${Math.round(page)+1}`, aria-label="Last") 
+                            span(aria-hidden="true") &raquo;
+                            span.sr-only Последний
+                else
+                    li.page-item
+                        a.page-link(href=`/news/page_${Math.round(count/20)}`, aria-label="Last") 
+                            span(aria-hidden="true") &raquo;
+                            span.sr-only Последний

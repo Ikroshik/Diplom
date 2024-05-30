@@ -1,0 +1,333 @@
+extends base
+
+append head 
+  link(rel="stylesheet", href="/css/mainPage.css")
+
+block content
+  .bgBanner
+    .container-fluid.px-0.mx-0.d-flex.justify-content-around.row.pb-5
+      div.container.mb-4.blockForHotLine
+        .bg-white.rounded-4.d-flex.py-2.px-4.hotLine.flex-sm-row.flex-column
+          img.mx-auto(src="/images/phone.svg", width="18%", alt="")
+          section.ms-sm-4.ms-0.col-12.col-sm-9
+            h1.fw-bold.text-sm-start.text-center Горячая линия
+            p.m-0.fs-5.fw-bold 8(3466) 43-54-70 (доб.132)
+            p.m-0.fs-5.fw-bold 8(3466) 43-55-19 (доб. 132)
+            p.m-0.fs-5.fw-bold 8(3466) 43-54-70 (доб. 133)
+
+      .col-12.d-flex.mt-3.justify-content-md-end.justify-content-center.col-lg-6
+        section.text-black.bpooNameText.mt-4
+          h5 Бюджетное учреждение профессионального образования Ханты-Мансийского автономного округа – Югры
+          h1.fw-bold «Нижневартовский #[p.m-0.nameCollegeWrap социально-гуманитарный] колледж»
+      .col-12.justify-content-end.d-flex.px-0.mx-0.col-lg-6
+        img.bpooLogoImg.shadow-lg.rounded-start-3(src="/images/logoBPOOBig.png" alt="")
+
+    .lines
+
+    .container.linksForPage
+      .d-flex.justify-content-around
+        a.text-black(href="#aboutBPOO" onmousedown="return false")
+          .d-flex.flex-column
+            img.mx-auto(src="/images/logoBPOOSquare.png", width="50", alt="")
+            p.m-0.text-black.fw-bold О БПОО
+        a.text-black(href="#atlas" onmousedown="return false")
+          .d-flex.flex-column.text-center
+            img.mx-auto(src="/images/atlasNewProf.png", width="50", alt="")
+            p.m-0.text-black.fw-bold Атласы
+        a.text-black(href="#news" onmousedown="return false")
+          .d-flex.flex-column
+            img.mx-auto(src="/images/newsButton.png", width="50", alt="")          
+            p.m-0.text-black.fw-bold Новости
+        a.text-black(href="#links" onmousedown="return false")
+          .d-flex.flex-column
+            img.mx-auto(src="/images/browser.png", width="50", alt="")
+            p.m-0.text-black.fw-bold Cсылки
+    nav.navbar.fixed-top.navbar-expand-lg#navAfterScroll
+      div.container-lg
+        a.navbar-brand(href="/")
+            img(src="/images/BPOOlogoLetters.svg", width="80", height="41" alt="БПОО")
+        button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBar" aria-controls="offcanvasNavBar" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+                img(src="/images/burger.svg", alt="")
+        div.offcanvas.offcanvas-end#offcanvasNavBar(tabindex="-1" aria-labelledby="offcanvasNavBarLabel")
+            .offcanvas-header.mt-5
+                h4.fw-bold.offcanvas-title#offcanvasNavBarLabel Навигация
+                button.btn-close(data-bs-dismiss="offcanvas" aria-label="Close")
+                    i.fa-solid.fa-xmark
+            .offcanvas-body.justify-content-end
+                ul.navbar-nav.align-items-lg-center
+                    li.nav-item.dropdown
+                        a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/basic-information", aria-expanded="false") Основные сведения
+                        button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                            i.fa-solid.fa-caret-down.text-center
+                        ul.dropdown-menu
+                            li.border-bottom
+                                a.dropdown-item(href="#") Направления деятельности
+                            li.border-bottom
+                                a.dropdown-item(href="/docs/Структура центра.pdf") Структура центра
+                            li.border-bottom
+                                a.dropdown-item(href="/basic-information/documents") Документы
+                            li
+                                a.dropdown-item(href="#") Контакты
+                    li.nav-item.dropdown
+                        a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/education", aria-expanded="false") Образование
+                        button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                            i.fa-solid.fa-caret-down.text-center
+                        ul.dropdown-menu
+                            li.border-bottom
+                                a.text-wrap.dropdown-item(href="/education/info-adapt-edu-progs") Информация о реализуемых адаптированных <br> образовательных программах
+                            li.border-bottom
+                                a.text-wrap.dropdown-item(href="/education/add-edu-progs") Программы дополнительного профессионального образования
+                            li
+                                a.dropdown-item(href="/education/methodological-recommendations") Методические рекомендации
+                    li.nav-item.dropdown
+                        a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/proforientation", aria-expanded="false") Профориентация
+                        button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                            i.fa-solid.fa-caret-down.text-center
+                        ul.dropdown-menu
+                            li.border-bottom
+                                a.dropdown-item(href="/proforientation/card-index-popular-professions") Картотека востребованных профессий <br> с учетом регионального рынка труда
+                            li.border-bottom
+                                a.dropdown-item(href="/docs/AtlasInkl2022.pdf", target="_blank") Атлас инклюзивного будущего
+                            li.border-bottom
+                                a.text-wrap.dropdown-item(href="#") Центр профориентации
+                            li
+                                a.dropdown-item(href="#") Трудоустройство
+                    li.nav-item.dropdown
+                        a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-3.px-2.py-2.rounded-start(href="/events", aria-expanded="false") Мероприятия
+                        button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                            i.fa-solid.fa-caret-down.text-center
+                        ul.dropdown-menu
+                            li.border-bottom
+                                a.dropdown-item(href="#") Повышение квалификации
+                            li.border-bottom
+                                a.text-wrap.dropdown-item(href="#") Конференции, семинары
+                            li.border-bottom
+                                a.dropdown-item(href="#") Абилимпикс
+                            li
+                                a.dropdown-item(href="#") Вебинары
+                    li.nav-item.dropdown
+                        a.col-8.col-lg-12.nav-link.dropdown-toggle.border.px-lg-0.me-lg-2.px-2.py-2.rounded-start(href="/partners", aria-expanded="false") Партнеры
+                        button.col-4.btn.btn-light.dropdown-toggle.d-inline-block.d-lg-none.border.rounded-end.rounded-0.border-start-0.py-2
+                            i.fa-solid.fa-caret-down.text-center
+                        ul.dropdown-menu
+                            li.border-bottom
+                                a.dropdown-item(href="/docs/1. Свод соглашений с номерами и датами о сетевом 2021 таблица.docx") Образовательные организации, <br> включенные в сетевое взаимодействие
+                            li.border-bottom
+                                a.dropdown-item(href="/docs/Соглашение с ИРО от 25.02.2021.pdf", target="_blank") ПМПК
+                            li.border-bottom
+                                a.dropdown-item(href="/docs/Соглашение БПОО с ФМЦИО 15.10.2021.pdf", target="_blank") ФМЦИО
+                            li.border-bottom
+                                a.dropdown-item(href="#") Производители ТСР
+                            li.border-bottom
+                                a.dropdown-item(href="#") ООИ
+                            li
+                                a.dropdown-item(href="#") РОИВ
+                    li.nav-item.d-lg-none.d-xl-block.d-block.mb-5.mb-lg-0
+                        a.nav-link.col-12.border.px-2.py-2.rounded(href="/hotline") Горячая линия
+                    li.nav-item.d-lg-none.d-xxl-block.d-block.mb-5.mb-lg-0
+                        a.nav-link.col-12.border.px-2.py-2.rounded(href="/access-environment") Доступная среда
+                    li.nav-item
+                        .d-flex.align-items-center.fw-bold.rounded-pill.btnForDisabled.text-white.justify-content-center.px-3.py-2.specialButton
+                            i.fa-solid.fa-eye.fa-lg.me-2
+                            .flex-column
+                                p.m-0 Версия для
+                                    br
+                                    | слабовидящих
+
+      //- div.container-lg                       
+      //-   a.navbar-brand(href="#")
+      //-     img(src="/images/BPOOlogoLetters.svg", width="80" alt="БПОО")
+      //-   button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavBar" aria-controls="offcanvasNavBar" aria-expanded="false" aria-label="Toggle navigation")
+      //-     span.navbar-toggler-icon
+      //-       img(src="/images/burger.svg", alt="")
+      //-   div.collapse.navbar-collapse.justify-content-end#navbarNavDropdown
+      //-       ul.navbar-nav.align-items-center
+      //-         li.nav-item.dropdown
+      //-           a.nav-link.dropdown-toggle.text-nowrap(href="/basic-information", aria-expanded="false") Основные сведения
+      //-           ul.dropdown-menu
+      //-             li
+      //-               a.dropdown-item(href="#") Направления деятельности
+      //-             li
+      //-               a.dropdown-item(href="#") Структура центра
+      //-             li
+      //-               a.dropdown-item(href="#") Документы
+      //-             li
+      //-               a.dropdown-item(href="#") Контакты
+      //-         li.nav-item.dropdown
+      //-           a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Образование
+      //-           ul.dropdown-menu
+      //-             li
+      //-               a.text-nowrap.dropdown-item(href="#") Информация о реализуемых адаптированных <br> образовательных программах
+      //-             li
+      //-               a.text-wrap.dropdown-item(href="#") Программы дополнительного профессионального образования
+      //-             li
+      //-               a.dropdown-item(href="#") Методические рекомендации
+      //-         li.nav-item.dropdown
+      //-           a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Профориентация
+      //-           ul.dropdown-menu
+      //-             li
+      //-               a.text-nowrap.dropdown-item(href="#") Картотека востребованных профессий <br> с учетом регионального рынка труда
+      //-             li
+      //-               a.text-wrap.dropdown-item(href="#") Центр профориентации
+      //-             li
+      //-               a.dropdown-item(href="#") Трудоустройство
+      //-         li.nav-item.dropdown
+      //-           a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Мероприятия
+      //-           ul.dropdown-menu
+      //-             li
+      //-               a.text-wrap.dropdown-item(href="#") Повышение квалификации
+      //-             li
+      //-               a.text-wrap.dropdown-item(href="#") Конференции, семинары
+      //-             li
+      //-               a.dropdown-item(href="#") Абилимпикс
+      //-             li
+      //-               a.dropdown-item(href="#") Вебинары
+      //-         li.nav-item.dropdown
+      //-           a.nav-link.dropdown-toggle(href="#", aria-expanded="false") Партнеры
+      //-           ul.dropdown-menu
+      //-             li
+      //-               a.text-nowrap.dropdown-item(href="#") Образовательные организации, <br> включенные в сетевое взаимодействие
+      //-             li
+      //-               a.text-wrap.dropdown-item(href="#") Производители ТСР
+      //-             li
+      //-               a.dropdown-item(href="#") ПМПК
+      //-             li
+      //-               a.dropdown-item(href="#") ООИ
+      //-             li
+      //-               a.dropdown-item(href="#") РОИВ
+      //-         li.nav-item.d-none.d-xxl-block
+      //-           a.nav-link.text-nowrap(href="#") Горячая линия
+      //-         li.nav-item.d-none.d-xxl-block
+      //-           a.nav-link.text-nowrap(href="#") Доступная среда
+      //-         li.nav-item
+      //-           div.d-flex.align-items-center.fw-bold.rounded-pill.btnForDisabled.text-white.justify-content-center.px-3.py-2.specialButton
+      //-             i.fa-solid.fa-eye.fa-lg.me-2
+      //-             .flex-column
+      //-                 p.m-0 Версия для
+      //-                     br
+      //-                     | слабовидящих
+    .container.py-5.mt-5#aboutBPOO
+      .row.justify-content-center.align-items-center.gy-5
+        .col-12.col-lg-4.text-center.text-lg-end.order-1.order-lg-1
+          h1.fw-bold.text-black БПОО -
+          //- img.shadow-lg.rounded-5.w-100.border.border-5.border-white(src="/images/ResourceCenter/251020163.jpg", alt="Ресурсный центр")
+        section.col-12.col-lg-6.text-black.order-2.order-lg-2.border-bottom.bg-body-tertiary.rounded.shadow
+          //- h2.fw-bold БАЗОВАЯ ПРОФЕССИОНАЛЬ&shy;НАЯ ОБРАЗОВАТЕЛЬНАЯ ОРГАНИЗАЦИЯ ПО ИНКЛЮЗИВНОМУ ОБРАЗОВАНИЮ
+          p.my-2 Базовая профессиональная образовательная организация – профессиональная образовательная организация, обеспечивающая поддержку функционирования региональной системы инклюзивного среднего профессионального образования инвалидов и лиц с ограниченными возможностями здоровья.
+        section.col-12.col-lg-6.text-black.order-3.order-lg-3.border-bottom.bg-body-tertiary.rounded.shadow
+          //- h2.fw-bold ЦЕЛЬ БПОО
+          p.my-2 1.	Разработка и реализация комплекса мер по профессиональной ориентации инвалидов и лиц с ОВЗ в целях выбора ими профессии/специальности с учетом их способностей и склонностей.<br>2.	Содействие в создании условий доступности в ПОО Ханты-Мансийского автономного округа-Югры, в том числе через организацию сетевого взаимодействия.<br>3.	Реализация мероприятий по сопровождению инвалидов и лиц с ОВЗ при освоении образовательных программ СПО и ПО, содействие в их последующем трудоустройстве.
+        .col-12.col-lg-4.text-center.text-lg-start.order-4.order-lg-4
+          h1.fw-bold.text-black - ЦЕЛЬ БПОО
+          //- img.shadow-lg.rounded-5.w-100.border.border-5.border-white(src="/images/x.jpg", alt="")
+        .col-12.col-lg-4.text-center.text-lg-end.order-5.order-lg-5
+          h1.fw-bold.text-black ЗАДАЧИ БПОО:
+          //- img.shadow-lg.rounded-5.w-100.border.border-5.border-white(src="/images/Camp/DSC02789.jpg", alt="")
+        section.col-12.col-lg-6.text-black.order-last.order-lg-6.border-bottom.bg-body-tertiary.rounded.shadow
+          //- h2.fw-bold ЗАДАЧИ БПОО
+          p.my-2 Координация развития инклюзивного  СПО и ПО в Ханты-Мансийском автономном округе-Югре, разработка и внедрение региональной модели сетевого взаимодействия с ПОО Ханты-Мансийского автономного округа-Югры для обеспечения условий доступности получения СПО и ПО для инвалидов и лиц с ОВЗ.
+          
+  .bg-body-tertiary#atlas
+    .container.py-5
+      .rounded.rounded-5.px-sm-5.px-4.py-3.mx-auto.bgForAtlases.mb-5
+        h1.fw-bold.text-white.d-inline-flex.p-0.m-0 Атласы профессий
+      .atlasBanner
+        .row.gy-5
+          .col-12.col-lg-6.text-center
+            a.position-relative(href="/docs/Атлас профессий 2022 ИТОГ с новой информацией.pdf", target="_blank")
+              .col.mx-auto.atlas.atlasFMCIO            
+              .bg-light-subtle.position-absolute.top-0.h-100.opacity-25
+              .position-absolute.border.border-3.top-0.shadow
+              h1.text-black.fw-bold.position-absolute.top-50.start-0.translate-middle.p-3 Атлас профессий
+                br
+                |всех регионов России
+          .col-12.col-lg-6.text-center
+            a.position-relative(href="/docs/AtlasInkl2022.pdf", target="_blank")
+              .col.mx-auto.atlas.atlasHMAO           
+              .bg-light-subtle.position-absolute.top-0.h-100.opacity-25
+              .position-absolute.border.border-3.top-0.shadow
+              h1.text-black.fw-bold.position-absolute.top-50.start-0.translate-middle.p-3 Атлас профессий
+                br
+                |ХМАО
+    
+
+  .bg-body-tertiary#news
+    .container
+      .d-flex.justify-content-center
+        a(href="/news") 
+          div.bgForNews.rounded.rounded-5.px-sm-5.px-4.py-3.mx-auto
+            h1.fw-bold.text-white.d-inline-flex.p-0.m-0 Последние новости
+      .blocksWithNews.row.g-4.mt-5
+        .bigBlockWithNews.col-lg-8.col-12
+          a.text-black(href=`/news/news_id_${news[0].id}`) 
+            .bg-white.d-flex.shadow.py-md-5.pt-3.pe-2.flex-column.flex-md-row
+              img.me-4.rounded-5.border.border-5.border-white.col-md-7.col-10.align-self-center.imgForNews(src=`/images/Camp/${news[0].image}`, alt="")
+              section.px-4.px-md-0             
+                - var date = String(news[0].createdAt.getDate()).padStart(2, "0") + '.' + String(news[0].createdAt.getMonth()+ 1).padStart(2, "0") + '.' + news[0].createdAt.getFullYear()   
+                span.dateNews #{date}
+                h4.fw-bold.titleNews #{news[0].title}       
+                p.newsText #{news[0].mini_text}
+        - var i = 0
+        while i < 4
+          .blockWithNews.col-lg-4.col-md-6.col-12
+            a.text-black(href=`/news/news_id_${news[i+1].id}`) 
+              .bg-white.d-flex.shadow.flex-column
+                - var date = String(news[i+1].createdAt.getDate()).padStart(2, "0") + '.' +  String(news[i+1].createdAt.getMonth()+ 1).padStart(2, "0") + '.' + news[i+1].createdAt.getFullYear()   
+                span.ps-4.pt-3.dateNews #{date}      
+                img.mx-auto.rounded-4.mb-2.imgForNews(src=`/images/Camp/${news[i+1].image}`, width="80%", alt="")
+                section.px-4.justify-content-center
+                  h5.fw-bold.titleNews #{news[i+1].title}
+                  p.newsText #{news[i+1].mini_text}
+          - i++
+      .text-center.py-5
+        a.btn.btn-lg.rounded-pill.text-white.newsBtn.px-5.py-3(href="/news") Все новости
+
+  .bgForLinksBlock#links
+    .container
+      div.d-flex.justify-content-center
+        a(href="/links") 
+          div.bg-body-tertiary.bgForLinks.rounded.rounded-5.px-sm-5.px-1.py-3.mx-auto
+            h1.fw-bold.d-inline-flex.p-0.m-0 Полезные ссылки
+      .row.g-4.text-center.py-5.justify-content-center
+        .col-sm-6.col-lg-4.col-12
+          a.text-black(href="//nv-study.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2
+              img.mx-auto(src="/images/NSGKlogo.png", alt="")
+              p.m-0 Нижневартовский социально - гуманитарный колледж
+                br
+                span Бюджетное учреждение профессионального образования
+                  br
+                  | Ханты-Мансийского автономного округа - Югры
+        .col-sm-6.col-lg-4.col-12
+          a.text-black(href="//fmc-spo.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto(src="/images/fmcio.png", alt="")
+              p.m-0 ФЕДЕРАЛЬНЫЙ МЕТОДИЧЕСКИЙ ЦЕНТР ПО ИНКЛЮЗИВНОМУ ОБРАЗОВАНИЮ
+        .col-md-4.col-sm-6.col-12
+          a.text-black(href="//inclusive-edu.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto.logoPio(src="/images/logoIPIO.png", alt="Институт проблем инклюзивного образования МГППУ")
+              p.m-0 Институт проблем инклюзивного образования МГППУ
+        .col-md-4.col-lg-3.col-sm-6.col-12
+          a.text-black(href="//voi.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto(src="/images/logoVOI.png", alt="")
+              p.m-0 Всероссийское общество инвалидов
+        .col-md-4.col-lg-3.col-sm-6.col-12
+          a.text-black(href="//voginfo.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto#VOG(src="/images/logoVOG.svg", alt="")
+              p.m-0 Общероссийская общественная организация инвалидов «Всероссийское общество глухих» 
+        .col-md-6.col-lg-3.col-sm-6.col-12
+          a.text-black(href="//vos.org.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto(src="/images/logoVOS.png", alt="")
+              p.m-0 Общероссийская общественная организация инвалидов «Всероссийское ордена Трудового Красного Знамени общество слепых»        
+        .col-md-6.col-lg-3.col-sm-6.col-12
+          a.text-black(href="//spo-rudn.ru")
+            .bg-white.rounded-3.flex-column.d-flex.py-2.h-100.justify-content-center
+              img.mx-auto(src="/images/spoLogo.png", alt="")
+              p.m-0 Экспертно-аналитическое сопровождение инклюзивного профессионального образования и трудоустройства лиц с инвалидностью и ограниченными возможностями здоровья
+  append blockBody
+    script(src="/js/navMainPage.js")       

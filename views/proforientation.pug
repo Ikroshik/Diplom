@@ -1,0 +1,28 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+            
+block contentForBlock
+    - var link = '/proforientation'
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/card-index-popular-professions`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Картотека востребованных профессий с учетом регионального рынка труда
+    section.linkToDoc.mb-4
+        a.text-black(href=`/docs/AtlasInkl2022.pdf`, target="_blank") 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-file.fa-xl.text-black
+            p.m-0.d-inline-block Атлас инклюзивного будущего
+             
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/info-about-prof-center-and-employment`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Информация по центру профориентации и трудоустройству
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/employment`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Трудоустройство

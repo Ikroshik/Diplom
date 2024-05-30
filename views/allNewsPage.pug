@@ -1,0 +1,85 @@
+extends base
+
+append head
+    link(rel="stylesheet", href="/css/stylesForOtherPages.css")
+
+block content
+    .bg-body-tertiary.pt-5
+        each _, index in news
+            .container.d-flex.mb-5
+                a.shadow(href=`/news/news_id_${news[index].id}`)   
+                    .d-flex.bg-body-secondary.rounded.p-4.row
+                        img.col-12.col-lg-4.rounded.imgPreviewNews(src=`/images/Camp/${news[index].image}`, alt="")
+                        .flex-column.justify-content-center.d-flex.col-12.col-lg-8
+                            small #{news[index].createdAt.toLocaleDateString("ru-RU")}
+                            h2.fw-bold #{news[index].title}
+                            p #{news[index].mini_text}
+            
+              
+          
+        nav.mb-5(aria-label="Pagination news")
+            ul.pagination.pagination-lg.justify-content-center
+                if page == 1
+                    li.page-item.disabled
+                        a.page-link.fs-4(href=`/news/page_1`, aria-label="First") 
+                            span(aria-hidden="true") &laquo;
+                            span.sr-only Первый
+                else
+                    li.page-item
+                        a.page-link.fs-4(href=`/news/page_1`, aria-label="First") 
+                            span(aria-hidden="true") &laquo;
+                            span.sr-only Первый
+                - var i = 0
+                - var pages = [-2, -1, 0, 1, 2]
+                - var totalPages = Math.round(count/6)
+                if totalPages > 5
+                    while i < 5  
+
+                        if parseInt(page)+pages[i] > totalPages
+                                          
+                        else if page < 2 
+                            if page == i+1
+                                li.page-item.active
+                                    a.page-link.fs-4(href=`/news/page_${i+1}`) #{i+1}
+                            else 
+                                li.page-item
+                                    a.page-link.fs-4(href=`/news/page_${i+1}`) #{i+1}          
+                        else                            
+                            if page == parseInt(page)+pages[i]
+                                li.page-item.active
+                                    a.page-link.fs-4(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}    
+                            else   
+                                li.page-item
+                                    a.page-link.fs-4(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}            
+
+                        - i++
+                else
+                    while i < totalPages  
+                        if count < parseInt(page)+pages[i]
+                                                
+                        else if page > 2 
+                            if page == parseInt(page)+pages[i]
+                                li.page-item.active
+                                    a.page-link.fs-4(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}    
+                            else   
+                                li.page-item
+                                    a.page-link.fs-4(href=`/news/page_${parseInt(page)+pages[i]}`) #{parseInt(page)+pages[i]}           
+                        else
+                            if page == i+1
+                                li.page-item.active
+                                    a.page-link.fs-4(href=`/news/page_${i+1}`) #{i+1}
+                            else 
+                                li.page-item
+                                    a.page-link.fs-4(href=`/news/page_${i+1}`) #{i+1}
+
+                        - i++
+                if page == totalPages
+                    li.page-item.disabled
+                        a.page-link.fs-4(href=`/news/page_${Math.round(page)+1}`, aria-label="Last") 
+                            span(aria-hidden="true") &raquo;
+                            span.sr-only Последний
+                else
+                    li.page-item
+                        a.page-link.fs-4(href=`/news/page_${totalPages}`, aria-label="Last") 
+                            span(aria-hidden="true") &raquo;
+                            span.sr-only Последний

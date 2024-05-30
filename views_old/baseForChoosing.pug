@@ -1,0 +1,20 @@
+extends base
+
+append head
+    link(rel="stylesheet", href="/css/stylesForOtherPages.css")
+
+block content
+    div.bg-body-tertiary
+        div.container.py-5
+            nav(aria-label="breadcrumb")
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a.text-black.fw-bold(href="/") БПОО
+                    block breadcrumb
+            block name
+                h1.fw-bold.mb-4 #{title}
+            article.bg-white.rounded-2.shadow.w-100.linksToDoc.p-5
+                section.container.mb-4.overflow-x-auto.py-2
+                    block contentForBlock
+    
+

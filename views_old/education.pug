@@ -1,0 +1,27 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+            
+block contentForBlock
+    - var link = '/education'
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/info-adapt-edu-progs`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Информация о реализуемых адаптированных образовательных программах
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/add-edu-progs`)
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Программы дополнительного профессионального образования
+    section.linkToDoc.mb-4
+        a.text-black(href=`${link}/methodological-recommendations`) 
+            span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                i.fa-solid.fa-arrow-right.fa-lg.text-black
+            p.m-0.d-inline-block Методические рекомендации
+    //- section.linkToDoc.mb-4
+    //-     a.text-black(href=`${link}/info-about-conditionals-for-disabled`) 
+    //-         span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+    //-             i.fa-solid.fa-arrow-right.fa-lg.text-black
+    //-         p.m-0.d-inline-block Информация об условиях для инвалидов и лиц с ОВЗ

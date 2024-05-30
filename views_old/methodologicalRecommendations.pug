@@ -1,0 +1,17 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/education") Образование
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+
+block contentForBlock
+    - var docs = ["Сборник лучших инклюзивных практик.pdf", "Сборник тезисов докладов по итогам Всероссийской конференции 2022.pdf", "Методические рекомендации по профобучению лиц с интеллектуальными нарушениями.pdf", "Метод рекомендации_Создание мастерских на базе ПОО.pdf", "Методические рекомендации по реализации типовой модели инклюзивных профориентационных смен.pdf", "Метод.рекомендации_Проведение мониторинга трудоустройства.pdf", "Метод.рекомендации_по разработке и реализации адапт.программ.pdf", "Чек-лист по обеспечению доступности зданий и сооружений для инвалидов и лиц с ОВЗ в БПОО и РУМЦ СПО.pdf"]
+    - var i = 0
+    while i < 8
+        section.linkToDoc.mb-4
+            a.text-black(href=`/docs/${docs[i]}`, target="_blank") 
+                span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                    i.fa-solid.fa-file.fa-xl.text-black
+                p.m-0.d-inline-block #{docs[i].slice(0, -4)}
+        - i++

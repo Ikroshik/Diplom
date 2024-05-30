@@ -1,0 +1,17 @@
+extends baseForChoosing 
+
+append breadcrumb
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/basic-information") Основные сведения
+    li.breadcrumb-item
+        a.text-black.fw-bold(href="/basic-information/documents") Документы
+    li.breadcrumb-item.active(aria-current="page")  #{title}
+            
+block contentForBlock
+    - var docs = ["1. Изменения в Устав 10.10.2016.pdf", "2. Приказ 1280 статус ресурсного центра.pdf", "3. Приказ_12.11.2021_№№1522_Положение БПОО.docx.pdf", "4. Дорожная карта 2021-2025 (без приказа).pdf", "5. №565-од от 02.12.2021_Паспорт БПОО.pdf", "6. Приказ_20.10.2021_№464_Модель_сетевого_взаимодейстия_ПОО.pdf", "7. Приказ_№465_20.10.2021_Центр_трудоустройства_инвалидов (2).pdf", "8. Приказ_№463_20.10.2021_Центр_сопровождения_приема_инвалидов.pdf", "9. Приказ №318 от 13.08.2021 комиссия по заключениям БПОО.pdf"]
+    each doc in docs
+        section.linkToDoc.mb-4
+                a.text-black(href=`/docs/${doc}`, target="_blank") 
+                    span.iconArrow.bg-secondary-subtle.p-2.rounded-3.me-2
+                        i.fa-solid.fa-file.fa-xl.text-black
+                    p.m-0.d-inline-block #{doc.substring(3).slice(0, -4)}    
